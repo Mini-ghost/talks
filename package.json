@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "private": true,
+  "packageManager": "pnpm@8.15.4",
+  "scripts": {
+    "build": "rimraf dist && esno scripts/build.ts",
+    "dev": "esno scripts/develop.ts dev",
+    "redirect": "esno scripts/redirects.ts"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.8.3",
+    "@iconify-json/logos": "^1.1.42",
+    "@slidev/cli": "^0.48.3",
+    "@slidev/theme-default": "^0.25.0",
+    "@slidev/theme-seriph": "^0.25.0",
+    "@types/prompts": "^2.4.9",
+    "esno": "^4.7.0",
+    "execa": "^8.0.1",
+    "fast-glob": "^3.3.2",
+    "prompts": "^2.4.2",
+    "rimraf": "^5.0.5",
+    "vue": "^3.4.21"
+  }
+}

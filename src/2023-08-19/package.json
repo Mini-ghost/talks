@@ -1,0 +1,11 @@
+{
+  "name": "open-source-adventure",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev"
+  },
+  "devDependencies": {
+    "@vorms/core": "^1.1.0-beta.5"
+  }
+}

@@ -1,0 +1,7 @@
+h1 {
+  font-weight: 700;
+}
+
+.slidev-layout blockquote {
+  border-left-width: 0.25rem;
+}
