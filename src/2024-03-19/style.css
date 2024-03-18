@@ -1,0 +1,12 @@
+:root.dark {
+  --slidev-code-background: #111213;
+}
+
+.dark.dark #slide-content {
+  background-color: black;
+}
+
+.slidev-layout blockquote {
+  border-left-width: 0.25rem;
+  border-right-width: 0.25rem;
+}
