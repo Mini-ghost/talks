@@ -42,7 +42,6 @@ class: pl-30 py-30
 
 # 同步 & 非同步執行
 
-
 <h2 class="!text-xl my-4">同步（Synchronous）</h2>
 
 <div class="text-sm p-6 border border-solid border-gray rounded-lg bg-white/5">
@@ -85,7 +84,15 @@ request('https://api.example.com/data-1', (error, data) => {
 
 <div class="h-5vh"/>
 
+<v-click>
+
 > `async`、`await` 和 `Promise` 等語言特性使得在 JavaScript 中編寫非同步程式碼更加容易。它們允許您以一種不論是看起來還是行為表現都像同步程式碼的方式，來編寫非同步程式碼，讓他更易於閱讀和理解。
+
+</v-click>
+
+<!--
+這個是在學習非同步程式設計時一定會提的經典範例。
+-->
 
 ---
 
@@ -290,6 +297,7 @@ function memoizedFetch(url: string) {
 
 }
 ```
+<v-click>
 
 ```ts
 const cache = new Map();
@@ -308,6 +316,8 @@ function memoizedFetch(url: string) {
   return promise
 }
 ```
+
+</v-click>
 
 </div>
 
@@ -339,6 +349,10 @@ asyncData.refresh = asyncData.execute = () => {
 }
 ```
 
+<!--
+在 Nuxt  3 的 `useAsnycData()` 內部也用到了 cache 的技巧。這樣一來如果同時有帶有相同 key 的請求則不會重複發出請求。
+-->
+
 ---
 
 # Cache 範例
@@ -349,9 +363,7 @@ TanStack Query（React Query）<Repo name="tanstack/query" />
 class QueryCache {
   #queries: Map<string, Query>
 
-  constructor() {
-    this.#queries = new Map<string, Query>()
-  }
+  constructor() { this.#queries = new Map<string, Query>() }
 
   build(options) {
     let query = this.get(options.queryHash)
@@ -359,6 +371,7 @@ class QueryCache {
       query = new Query({ /** 略 */ })
       this.add(query)
     }
+    return query
   }
 
   add(query: Query) { this.#queries.set(query.queryHash, query) }
@@ -372,6 +385,10 @@ class QueryCache {
 參考閱讀：[深入淺出 TanStack Query（一）：在呼叫 useQuery 後發生了什麼事](https://mini-ghost.dev/posts/tanstack-query-source-code-1)
 
 </span>
+
+<!--
+在 TanStack Query 中會使用 `queryHash` 來當作識別請求 context（query）的 key，只要有找到對應的 query 則會重複使用它。
+-->
 
 ---
 
@@ -422,6 +439,10 @@ async function requestWithRetry(url) {
 ```
 
 </div>
+
+<!--
+提醒：JavaScript 設計模式學習手冊的 115 頁的 Promise 重試範例有錯。
+-->
 
 ---
 
@@ -487,28 +508,6 @@ axiosInstance.interceptors.response.use(null, async ({ config }) => {
 
 ofetch <Repo name="unjs/ofetch" />
 
-<div class="grid grid-cols-2 gap-2">
-
-```ts
-async function $fetchRaw() {
-  const context = { /** 略 */ }
-
-  try {
-    context.response = await fetch(
-      context.request,
-      context.options as RequestInit
-    );
-  } catch (error) {
-    context.error = error as Error;
-    if (context.options.onRequestError) {
-      await context.options.onRequestError(context as any);
-    }
-    return await onError(context);
-  }
-
-  // ...
-}
-```
 
 ```ts
 async function onError(context: FetchContext): Promise<FetchResponse<any>> {
@@ -532,8 +531,6 @@ async function onError(context: FetchContext): Promise<FetchResponse<any>> {
   throw error;
 }
 ```
-
-</div>
 
 ---
 layout: center

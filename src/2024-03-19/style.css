@@ -10,3 +10,12 @@
   border-left-width: 0.25rem;
   border-right-width: 0.25rem;
 }
+
+.slidev-vclick-target {
+  transition: opacity 300ms ease-in-out;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
