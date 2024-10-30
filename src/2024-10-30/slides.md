@@ -173,7 +173,7 @@ const { data, isLoading } = useQuery({
 </div>
 
 <div class="py-4">
-  <span v-click ><span class="bg-yellow/15 text-yellow rounded px-2 py-0.5">staleTime</span> is your Best Fried!</span>
+  <span v-click ><span class="bg-yellow/15 text-yellow rounded px-2 py-0.5">staleTime</span> is your Best Friend!</span>
 
   <div class="grid grid-cols-2 gap-6 mt-3">
 
