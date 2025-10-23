@@ -1,24 +1,28 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.15.9",
+  "packageManager": "pnpm@10.18.3",
   "scripts": {
     "build": "rimraf dist && esno scripts/build.ts",
     "dev": "esno scripts/develop.ts dev",
     "redirect": "esno scripts/redirects.ts"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@iconify-json/logos": "^1.2.3",
-    "@slidev/cli": "^0.50.0-beta.5",
+    "@antfu/eslint-config": "^6.0.0",
+    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/mdi": "^1.2.3",
+    "@iconify-json/ri": "^1.2.6",
+    "@iconify-json/vscode-icons": "^1.2.32",
+    "@slidev/cli": "^52.2.5",
     "@slidev/theme-default": "^0.25.0",
     "@slidev/theme-seriph": "^0.25.0",
     "@types/prompts": "^2.4.9",
     "esno": "^4.8.0",
-    "execa": "^9.5.0",
-    "fast-glob": "^3.3.2",
+    "execa": "^9.6.0",
+    "fast-glob": "^3.3.3",
     "prompts": "^2.4.2",
     "rimraf": "^6.0.1",
-    "vue": "^3.5.12"
+    "slidev-addon-graph": "^1.0.0",
+    "vue": "^3.5.22"
   }
 }
