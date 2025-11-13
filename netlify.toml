@@ -37,6 +37,16 @@ to = "/2024/qlieer-book-club-october/index.html"
 status = 200
 
 [[redirects]]
+from = "2025-11-13"
+to = "https://talks.mini-ghost.dev/2025/source-code-for-vue-ch7-and-ch8/"
+status = 301
+
+[[redirects]]
+from = "/2025/source-code-for-vue-ch7-and-ch8/*"
+to = "/2025/source-code-for-vue-ch7-and-ch8/index.html"
+status = 200
+
+[[redirects]]
 from = "/"
 to = "https://mini-ghost.dev/talks"
 status = 302
