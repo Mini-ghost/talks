@@ -1,0 +1,10 @@
+{
+  "name": "jsdc-vite-adventure",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  }
+}

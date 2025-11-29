@@ -1,0 +1,74 @@
+{
+  "id": "vite-plugin-hooks",
+  "pos": {
+    "config": {
+      "x": -235,
+      "y": -271
+    },
+    "configResolved": {
+      "x": 96,
+      "y": -279
+    },
+    "configureServer": {
+      "x": -183,
+      "y": -197
+    },
+    "configurePreviewServer": {
+      "x": -186,
+      "y": -131
+    },
+    "options": {
+      "x": 97,
+      "y": -219
+    },
+    "buildStart": {
+      "x": 93,
+      "y": -148
+    },
+    "resolveId": {
+      "x": -59,
+      "y": -60
+    },
+    "load": {
+      "x": -56,
+      "y": 12
+    },
+    "transform": {
+      "x": 39,
+      "y": 89
+    },
+    "transformIndexHtml": {
+      "x": 154,
+      "y": 292
+    },
+    "fileChange": {
+      "x": -230,
+      "y": 187
+    },
+    "handleHotUpdate": {
+      "x": -200,
+      "y": 101
+    },
+    "buildEnd": {
+      "x": 151,
+      "y": 155
+    },
+    "generateBundle": {
+      "x": 153,
+      "y": 228
+    },
+    "closeBundle": {
+      "x": 153,
+      "y": 362
+    },
+    "transformIndexHtml:dev": {
+      "x": 178,
+      "y": -60
+    }
+  },
+  "view": {
+    "x": -16.40198955779354,
+    "y": 36.46263270418614
+  },
+  "scale": 0.7462884541023588
+}

@@ -1,7 +1,7 @@
 {
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.22.0",
+  "packageManager": "pnpm@10.23.0",
   "scripts": {
     "build": "rimraf dist && esno scripts/build.ts",
     "dev": "esno scripts/develop.ts dev",
@@ -9,9 +9,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^6.2.0",
+    "@iconify-json/devicon": "^1.2.51",
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.6",
+    "@iconify-json/solar": "^1.2.5",
     "@iconify-json/vscode-icons": "^1.2.33",
     "@slidev/cli": "^52.8.0",
     "@slidev/theme-default": "^0.25.0",
