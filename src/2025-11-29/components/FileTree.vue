@@ -11,7 +11,7 @@ interface Props {
   depth?: number
 }
 
-const { depth } = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   depth: 0,
 })
 </script>

@@ -72,7 +72,7 @@ clicks: 2
 
 <ViteChip :orbit="$clicks >= 2" class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2" />
 
-<img v-click="[1,2]" src="./coffee-time.png" class="absolute top-5 left-1/2 -translate-x-1/2 w-2/3 rounded-lg shadow-xl" />
+<img v-click="[1,2]" src="/coffee-time.png" class="absolute top-5 left-1/2 -translate-x-1/2 w-2/3 rounded-lg shadow-xl" />
 
 <!--
 Vite 從 2020 年 4 月推出到現在一直都受到開發社群非常高度的關注，它透過瀏覽器對 ES Modules 原生的支援實現了「按需載入被請求的模組」的功能。比起過去 Webpack 需要完整打包整個專案後才能啟動開發伺服器，速度真的快非常多。
@@ -92,7 +92,7 @@ class: text-center
 ---
 
 <div class="w-16em mx-auto">
-  <img src="./kaochenlong-vite-yt.png" class="w-full shadow-lg rounded-lg" />
+  <img src="/kaochenlong-vite-yt.png" class="w-full shadow-lg rounded-lg" />
 </div>
 
 <!--
@@ -1697,7 +1697,7 @@ class: text-center pb-5
 
 <div />
 
-<img src="./vite-plugin-inspect.png" class="scale-110 translate-y-2em" alt="Vite Plugin Inspect" />
+<img src="/vite-plugin-inspect.png" class="scale-110 translate-y-2em" alt="Vite Plugin Inspect" />
 
 ---
 
@@ -1746,7 +1746,7 @@ class: text-center pb-5
 
 ---
 
-<img src="./v-conf.jpg" class="rounded-xl shadow-xl" alt="2026 V-Conf Taiwan" />
+<img src="/v-conf.jpg" class="rounded-xl shadow-xl" alt="2026 V-Conf Taiwan" />
 
 ---
 layout: intro
