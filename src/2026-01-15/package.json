@@ -1,0 +1,10 @@
+{
+  "name": "source-code-for-vue-ch13-and-ch14",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev",
+    "export": "slidev export"
+  }
+}
