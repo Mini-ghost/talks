@@ -77,6 +77,16 @@ to = "/2026/source-code-for-vue-ch13-and-ch14/index.html"
 status = 200
 
 [[redirects]]
+from = "2026-05-16"
+to = "https://talks.mini-ghost.dev/2026/things-i-learned-from-ssr/"
+status = 301
+
+[[redirects]]
+from = "/2026/things-i-learned-from-ssr/*"
+to = "/2026/things-i-learned-from-ssr/index.html"
+status = 200
+
+[[redirects]]
 from = "/"
 to = "https://mini-ghost.dev/talks"
 status = 302
