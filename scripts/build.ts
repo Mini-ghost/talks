@@ -1,18 +1,19 @@
+import { join } from 'node:path'
 import { execa } from 'execa'
 import { context } from './shares'
 
-const promises: Promise<any>[] = []
+const CONCURRENCY = 2
+const queue = [...context]
 
-context.forEach(({ root, base }) => {
-  const out = `../../dist/${base}`
+async function worker() {
+  while (queue.length) {
+    const { root, base } = queue.shift()!
+    const out = join('../../dist', base)
+    await execa('pnpm', ['build', '--base', base, '--out', out], {
+      cwd: new URL(`../${root}`, import.meta.url),
+      stdio: 'inherit',
+    })
+  }
+}
 
-  const args = ['build', '--base', base, '--out', out]
-  const promise = execa('pnpm', args, {
-    cwd: new URL(`../${root}`, import.meta.url),
-    stdio: 'inherit',
-  })
-
-  promises.push(promise)
-})
-
-await Promise.all(promises)
+await Promise.all(Array.from({ length: CONCURRENCY }, worker))
