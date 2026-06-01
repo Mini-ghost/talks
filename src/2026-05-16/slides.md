@@ -1377,15 +1377,25 @@ new URL('/api/posts', 'https://example.com')
 </div>
 
 <div v-click class="flex items-center gap-1 mt-6">
-  <ph-lightbulb-duotone/><div><code>fetch('/api/posts')</code> 在瀏覽器中通常合法，因為瀏覽器有當前頁面的 URL context。</div>
+  <ph-lightbulb-duotone/><div><code>fetch('/api/posts')</code> 在瀏覽器中通常合法，是因為瀏覽器有當前頁面的 URL context。</div>
 </div>
 <div v-click class="flex items-center gap-1 text-amber mt-2">
   <ph-question-duotone/><div>為什麼 Nuxt 在 Server 可以使用 <code>$fetch('/api/posts')</code>？</div>
 </div>
 
 ---
+clicks: 1
+---
 
-<h2 class="font-500">Nuxt 的 <code>$fetch</code> 做了什麼</h2>
+<h2 class="flex items-center font-500 gap-1.5">
+  <div class="text-end h-1em overflow-hidden">
+    <div class="transition-transform duration-800" :class="{ '-translate-y-1.3em': $clicks === 1 }">
+      <div aria-hidden="true">Nuxt</div>
+      <div>Nitro</div>
+    </div>
+  </div>
+  的<code>$fetch</code> 做了什麼
+</h2>
 
 <div class="text-xs text-gray my-3">
   <ph-shovel-duotone/> 挖掘原始碼 ...
